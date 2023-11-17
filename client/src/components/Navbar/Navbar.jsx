@@ -9,9 +9,11 @@ const Navbar = () => {
     return (
         <div className='navbar-parent'>
             <div className="nav-left">
+                <Link to={'/'} className='logo-link'>
                 {/* Logo */}
                 <div className="logo-img"><i className="fa-solid fa-user-doctor" /></div>
                 <div className="logo-name">Doc<p>Care</p></div>
+                </Link>
             </div>
             {/*  */}
             <div className={state ? "nav-center active" :"nav-center" }>

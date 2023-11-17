@@ -23,6 +23,10 @@
 
     .app-container {
         min-height: 60vh;
+        background: url('./assets//images/Blur.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     /* Navbar */
@@ -32,24 +36,26 @@
         padding: 1rem 0;
 
         .nav-left {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            width: auto;
-            font-family: var(--wide);
-
-            .logo-img {
-                font-size: 2.25rem;
-            }
-
-            .logo-name {
-                font-size: 1.75rem;
+            .logo-link {
                 display: flex;
-                font-weight: 600;
+                gap: 10px;
+                align-items: center;
+                font-family: var(--wide);
+                color: var(--black);
 
-                & p {
-                    color: var(--yellow);
-                    font-weight: 700;
+                .logo-img {
+                    font-size: 2.25rem;
+                }
+
+                .logo-name {
+                    font-size: 1.75rem;
+                    display: flex;
+                    font-weight: 600;
+
+                    & p {
+                        color: var(--yellow);
+                        font-weight: 700;
+                    }
                 }
             }
         }
@@ -87,18 +93,19 @@
             align-items: center;
             z-index: 100;
 
-            
+
             .login-btn {
                 background-color: var(--black);
                 padding: 8px 12px;
                 border-radius: 2px;
                 transition: 0.3s ease;
-                
+
                 .navbar-login-link {
                     text-decoration: none;
                     color: var(--white);
                 }
             }
+
             .login-btn:hover {
                 background-color: var(--yellow);
                 color: var(--black-light);
@@ -204,6 +211,77 @@
             }
         }
     }
+
+    /* Login Page */
+    .login-parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem;
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2.5rem;
+            box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.19);
+            border-radius: 8px;
+            width: 50%;
+
+            & h1 {
+                display: flex;
+                gap: 10px;
+
+                & p {
+                    color: var(--yellow);
+                }
+            }
+
+            & input {
+                outline: invert;
+                padding: 8px 12px;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            .login-input {
+                display: flex;
+                flex-direction: column;
+
+                & label {
+                    font-size: 1.5rem;
+                    font-family: var(--wide);
+                    font-weight: 600;
+                }
+            }
+
+            .login-btn {
+                background-color: var(--yellow);
+                padding: 8px 12px;
+                text-align: center;
+                font-weight: 400;
+                font-size: 1.2rem;
+
+            }
+
+            .login-btn:hover {
+                font-weight: 600;
+            }
+
+            .login-newhere {
+                text-align: center;
+                font-size: 1rem;
+                color: var(--black-light);
+
+                .login-register-redirect {
+                    font-weight: 600;
+                    text-decoration: underline;
+                    color: var(--black);
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -272,5 +350,36 @@
                 }
             }
         }
+
+        /* Login Page */
+        .login-parent {
+            .login-form {
+                width: 90%;
+            }
+        }
+    }
+}
+
+/* Media Query 520px */
+@media only screen and (max-width:520px) {
+    .app-parent {
+
+        /* Login Page */
+        .login-parent {
+            padding: 2.5rem 1rem;
+
+            .login-form {
+                padding: 1.5rem;
+                width: 100%;
+                gap: 1.5rem;
+
+                & h1 {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+
+
+        
     }
 }

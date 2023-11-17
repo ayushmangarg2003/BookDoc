@@ -1,9 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <div className="login-parent">
+      <div className="login-form">
+        <h1>Hello! <p>Welcome</p> Back</h1>
+        <input type="text" id='email' placeholder='Enter Email' />
+        <input type="text" id="password" placeholder='Enter Password' />
+        <div className='login-btn'>Login</div>
+        <div className='login-newhere'>New Here ? <Link className='login-register-redirect' to={'/register'}> Register</Link></div>
+      </div>
+    </div>
   )
 }
 
-export default Login
+export default Login 
