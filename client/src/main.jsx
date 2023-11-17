@@ -11,4 +11,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>,
 )
 
-export const backendLink = `http://localhost:4000/api`;
+export const backendLink = `http://localhost:4000`;

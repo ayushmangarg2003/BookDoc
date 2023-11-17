@@ -8,11 +8,11 @@ const express = require('express')
 const app = express()
 const cors = require("cors");
 const { default: mongoose, mongo } = require('mongoose')
-const doctorRoutes = require('./Routes/doctorRoutes')
+const userRoutes = require('./Routes/UserRoute')
 //Middlewares
 app.use(cors())
 app.use(express.json())
-app.use('/api/doctors', doctorRoutes)
+app.use('/api/auth', userRoutes)
 
 //Routes
 
