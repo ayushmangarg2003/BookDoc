@@ -2,7 +2,12 @@ import React from 'react'
 
 const Doctors = () => {
   return (
-    <div>Doctors</div>
+    <div className="doctors-parent">
+      <div className="section-heading">FIND A DOCTOR</div>
+      <div className='doctors-container'>
+
+      </div>
+    </div>
   )
 }
 

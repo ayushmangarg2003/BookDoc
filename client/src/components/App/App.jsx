@@ -9,6 +9,7 @@ import Services from '../../pages/Services'
 import DoctorDetails from '../../pages/DoctorDetails'
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
+import About from '../../pages/About';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/doctors" element={<Doctors />} />
             <Route path="/doctors/:id" element={<DoctorDetails />} />
+            <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

@@ -2,7 +2,12 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div className="contact-parent">
+      <div className="section-heading">CONTACT</div>
+      <div className='contact-container'>
+
+      </div>
+    </div>
   )
 }
 

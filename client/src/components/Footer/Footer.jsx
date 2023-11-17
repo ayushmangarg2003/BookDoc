@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { LINKEDIN, TWITTER, GITHUB, INSTAGRAM, NAME } from '../../assets/utils'
+import { LINKEDIN, TWITTER, GITHUB, INSTAGRAM, COMPANY_NAME_1, COMPANY_NAME_2, COPYRIGHT } from '../../assets/utils'
 const Footer = () => {
     return (
         <div className='footer'>
             <div className="footer-left">
                 <div className="footer-logo">
                     <div className="footer-logo-img"><i className="fa-solid fa-user-doctor" /></div>
-                    <div className="footer-logo-name">Doc<p>Care</p></div>
+                    <div className="footer-logo-name">{COMPANY_NAME_1}<p>{COMPANY_NAME_2}</p></div>
                 </div>
-                <div className="footer-copyright">Copyright @ Made by {NAME}</div>
+                <div className="footer-copyright">{COPYRIGHT}</div>
                 <div className="footer-socials">
                     <a href={LINKEDIN} target={'blank'} className='linkedin'>
                         <i className="fa-brands fa-linkedin"></i>
@@ -36,7 +36,7 @@ const Footer = () => {
                     <Link to={'/'} className='footer-quicklink'>Home</Link>
                     <Link to={'/doctors'}  className='footer-quicklink'>Doctors</Link>
                     <Link to={'/services'} className='footer-quicklink'>Services</Link>
-                    <Link to={'/'} className='footer-quicklink'>Blogs</Link>
+                    <Link to={'/about'} className='footer-quicklink'>About us</Link>
                 </div>
                 <div className="quick-links">
                     <h1>Support</h1>
