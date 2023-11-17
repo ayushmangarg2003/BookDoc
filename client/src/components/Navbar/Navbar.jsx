@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import "./Navbar.css"
 import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [state, setState] = useState(false);
@@ -12,15 +11,19 @@ const Navbar = () => {
             <div className="nav-left">
                 {/* Logo */}
                 <div className="logo-img"><i className="fa-solid fa-user-doctor" /></div>
-                <div className="logo-name">DocCare</div>
+                <div className="logo-name">Doc<p>Care</p></div>
             </div>
             {/*  */}
             <div className={state ? "nav-center active" :"nav-center" }>
                 {/* Navlinks */}
-                <div className="navlink" onClick={handleClick} ><i className="fa-solid fa-house-user" /><Link className='navlink-link' to={'/'}>Home</Link></div>
+                <div className="navlink" onClick={handleClick} ><Link className='navlink-link' to={'/'}>Home</Link></div>
+                <div className="navlink" onClick={handleClick} ><Link className='navlink-link' to={'/doctors'}>Doctors</Link></div>
+                <div className="navlink" onClick={handleClick} ><Link className='navlink-link' to={'/services'}>Services</Link></div>
+                <div className="navlink" onClick={handleClick} ><Link className='navlink-link' to={'/contact'}>Contact</Link></div>
+                {/* <div className="navlink" onClick={handleClick} ><i className="fa-solid fa-house-user" /><Link className='navlink-link' to={'/'}>Home</Link></div>
                 <div className="navlink" onClick={handleClick} ><i className="fa-solid fa-user-doctor" /><Link className='navlink-link' to={'/doctors'}>Doctors</Link></div>
                 <div className="navlink" onClick={handleClick} ><i className="fa-solid fa-briefcase" /><Link className='navlink-link' to={'/services'}>Services</Link></div>
-                <div className="navlink" onClick={handleClick} ><i className="fa-solid fa-address-book" /><Link className='navlink-link' to={'/contact'}>Contact</Link></div>
+                <div className="navlink" onClick={handleClick} ><i className="fa-solid fa-address-book" /><Link className='navlink-link' to={'/contact'}>Contact</Link></div> */}
             </div>
 
             <div className="nav-right">
