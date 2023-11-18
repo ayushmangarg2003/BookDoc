@@ -35,7 +35,7 @@ const Navbar = () => {
                 {/* Login Btn */}
                 {user && (
                     <div>
-                        <Link className='user-icon' to={`/profile`}><i class="fa-solid fa-user-injured"></i></Link>
+                        <Link className='user-icon' to={`/profile`}><i className="fa-solid fa-user-injured"></i></Link>
                     </div>
                 )}
                 {!user && (

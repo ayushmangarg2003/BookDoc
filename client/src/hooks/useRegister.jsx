@@ -16,7 +16,7 @@ export const useRegister = () => {
             await axios.post(`${backendLink}/api/auth/register`, user)
             navigate('/')
             localStorage.setItem('user', JSON.stringify(user))
-            dispatch({ type: 'LOGIN', payload: user })
+            dispatch({ type: 'LOGIN', payload: {name, email, role, gender} })
         } catch (error) {
             setError(error.response.data.error);
         }

@@ -13,7 +13,6 @@ const userRoutes = require('./Routes/UserRoute')
 app.use(cors())
 app.use(express.json())
 app.use('/api/auth', userRoutes)
-
 //Routes
 
 

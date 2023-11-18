@@ -17,10 +17,9 @@ export const useLogin = () => {
             await axios.post(`${backendLink}/api/auth/login`, user)
             navigate('/')
             localStorage.setItem('user', JSON.stringify(user))
-            dispatch({ type: 'LOGIN', payload: user })
+            dispatch({ type: 'LOGIN', payload: {email} })
         } catch (error) {
             setError(error.response.data.error);
-            // console.log(error);
         }
     }
 

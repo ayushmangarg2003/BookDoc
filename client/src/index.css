@@ -29,6 +29,7 @@
         background-size: cover;
         padding: 2rem 0;
     }
+
     /* Common Classes */
     .section-heading {
         text-align: center;
@@ -39,7 +40,7 @@
         text-decoration-color: var(--yellow);
         text-decoration-thickness: 5px;
     }
-    
+
     /* Navbar */
     .navbar-parent {
         display: flex;
@@ -105,8 +106,8 @@
             align-items: center;
             z-index: 100;
 
-            .user-icon{
-                & i{
+            .user-icon {
+                & i {
                     background-color: var(--black-light);
                     color: var(--white);
                     width: 100%;
@@ -425,6 +426,59 @@
             }
         }
     }
+
+
+    /* Contact Page */
+    .contact-container {
+        padding: 5rem 0;
+
+        .contact-form {
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .form-left {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-right: 20px;
+
+                & input {
+                    width: 300px;
+                    font-size: 16px;
+                    padding: 20px;
+                }
+            }
+
+            .form-right {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                & textarea {
+                    width: 300px;
+                    height: 70%;
+                    padding: 20px;
+                    font-size: 16px;
+                    font-family: var(--normal);
+                }
+
+                .form-btn {
+                    padding: 10px 20px;
+                    font-size: 20px;
+                    background-color: var(--yellow);
+                    color: var(--white);
+                    border: 2px solid var(--white);
+                    border-radius: 8px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
 
 
@@ -541,6 +595,40 @@
         .about-parent {
             .about-container {
                 margin: 4rem 2rem;
+            }
+        }
+
+        /* Contact Page */
+        .contact-container {
+            padding: 5rem 0;
+
+            .contact-form {
+                flex-direction: column;
+                height: 300px;
+                .form-left {
+                    height: 50%;
+                    margin-right: 0;
+
+                    & input {
+                        padding: 10px;
+                        width: 275px;
+                    }
+                }
+
+                .form-right {
+                    height: 50%;
+
+                    & textarea {
+                        margin-top: 20px;
+                        padding: 10px;
+                        width: 275px
+                    }
+
+                    .form-btn {
+                        font-size: 16px;
+                        margin-top: 20px;
+                    }
+                }
             }
         }
     }

@@ -6,9 +6,9 @@ export const useLogout = () => {
   const navigate = useNavigate();
 
   const logout = () => {
-      dispatch({ type: 'LOGOUT' })
+    dispatch({ type: 'LOGOUT' })
     localStorage.removeItem('user')
-    navigate('/')
+    navigate('/login')
   }
 
   return { logout }
