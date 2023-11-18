@@ -10,6 +10,7 @@ import DoctorDetails from '../../pages/DoctorDetails'
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import About from '../../pages/About';
+import Profile from '../../pages/Profile';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/doctors/:id" element={<DoctorDetails />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>

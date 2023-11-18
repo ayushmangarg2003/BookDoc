@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { COMPANY_NAME_1, COMPANY_NAME_2 } from '../../assets/utils';
+import { useAuthContext } from '../../hooks/useAuthContext'
+
 const Navbar = () => {
     const [state, setState] = useState(false);
+    const { user } = useAuthContext()
+
+
     const handleClick = () => {
         setState(!state)
     }
@@ -28,7 +33,14 @@ const Navbar = () => {
 
             <div className="nav-right">
                 {/* Login Btn */}
-                <div className="login-btn"><Link className='navbar-login-link' to={'/login'}>Login</Link></div>
+                {user && (
+                    <div>
+                        <Link className='user-icon' to={`/profile`}><i class="fa-solid fa-user-injured"></i></Link>
+                    </div>
+                )}
+                {!user && (
+                    <div className="login-btn"><Link className='navbar-login-link' to={'/login'}>Login</Link></div>
+                )}
                 <div className="hamburger-icon" onClick={handleClick}><i className={state ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i></div>
             </div>
         </div>
