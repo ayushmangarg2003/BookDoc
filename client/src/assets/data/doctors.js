@@ -1,36 +1,37 @@
-import doctorImg01 from "../images/doctor-img01.png";
-import doctorImg02 from "../images/doctor-img02.png";
-import doctorImg03 from "../images/doctor-img03.png";
+import doctorImg01 from "../images/doctor-img02.png";
+import doctorImg02 from "../images/doctor-img03.png";
+import doctorImg03 from "../images/doctor-img01.png";
+import doctorImg04 from "../images/hero-img01.png";
 
 export const doctors = [
   {
     id: "01",
-    name: "Dr. Alfaz Ahmed",
+    name: "Dr. Ayushman Garg",
     specialty: "Surgeon",
-    avgRating: 4.8,
-    totalRating: 272,
-    photo: doctorImg01,
-    totalPatients: 1500,
-    hospital: "Mount Adora Hospital, Sylhet.",
+    rating: 4.8,
+    img: doctorImg01,
+    patients: 1500,
+    hospital: "Fortis Hospital",
+    city: "Delhi",
   },
   {
     id: "02",
-    name: "Dr. Saleh Mahmud",
+    name: "Dr. Aviral Sharma",
     specialty: "Neurologist",
-    avgRating: 4.8,
-    totalRating: 272,
-    photo: doctorImg02,
-    totalPatients: 1500,
-    hospital: "Mount Adora Hospital, Sylhet.",
+    rating: 4.8,
+    img: doctorImg02,
+    patients: 1500,
+    hospital: "Max Hospital",
+    city: "Mathura",
   },
   {
     id: "03",
-    name: "Dr. Farid Uddin",
+    name: "Dr. Pranav Kalondia",
     specialty: "Dermatologist",
-    avgRating: 4.8,
-    totalRating: 272,
-    photo: doctorImg03,
-    totalPatients: 1500,
-    hospital: "Mount Adora Hospital, Sylhet.",
+    rating: 2.4,
+    img: doctorImg03,
+    patients: 600,
+    hospital: "Dawakhana",
+    city: "Karachi",
   },
 ];

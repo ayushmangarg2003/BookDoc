@@ -13,6 +13,9 @@
     --black: #151515;
     --black-light: #555555;
     --white: #f6f6f6;
+    --red: red;
+    --green: green;
+    --blue: blue;
 }
 
 /* Whole App CSS */
@@ -427,7 +430,6 @@
         }
     }
 
-
     /* Contact Page */
     .contact-container {
         padding: 5rem 0;
@@ -479,6 +481,109 @@
             }
         }
     }
+
+    /* Doctor Card */
+    .doctors-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5rem 1rem;
+    }
+
+    .doc-card {
+        padding: 10px 10px 20px 10px;
+        box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.19);
+        border-radius: 4px;
+        max-width: 23%;
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s ease;
+        border-bottom: 0.1px solid var(--black-light);
+        gap: 1.25rem;
+
+        & img {
+            width: 100%;
+            border-radius: 12px;
+            max-height: 300px;
+        }
+
+        .name-title {
+            color: var(--black-light);
+            font-size: 1.1rem;
+            font-family: var(--wide);
+        }
+
+        & h1 {
+            font-size: 1.25rem;
+            color: var(--black);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+
+            .patients {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .patient-logo {
+                    color: var(--blue);
+                    font-size: 1.25rem;
+
+                }
+            }
+
+            .rating {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .rating-logo {
+                    color: var(--yellow);
+                    font-size: 1.25rem;
+                }
+            }
+        }
+
+        .location {
+            display: flex;
+            justify-content: space-around;
+
+            .hospital {
+                display: flex;
+                width: 50%;
+                flex-direction: column;
+                align-items: center;
+
+                .icon {
+                    color: var(--green);
+                    font-size: 1.25rem;
+
+                }
+            }
+
+            .city {
+                display: flex;
+                width: 50%;
+                flex-direction: column;
+                align-items: center;
+
+                .icon {
+                    color: var(--red);
+                    font-size: 1.25rem;
+
+                }
+            }
+        }
+    }
+
+    .doc-card:hover {
+        box-shadow: -5px -10px 10px rgba(0, 0, 0, 0.19);
+    }
 }
 
 
@@ -506,6 +611,11 @@
                 padding: 1rem;
 
             }
+        }
+
+        /* Doctor Card */
+        .doc-card {
+            max-width: 30%;
         }
     }
 }
@@ -605,6 +715,7 @@
             .contact-form {
                 flex-direction: column;
                 height: 300px;
+
                 .form-left {
                     height: 50%;
                     margin-right: 0;
@@ -630,6 +741,11 @@
                     }
                 }
             }
+        }
+
+        /* Doctor Card */
+        .doc-card {
+            max-width: 45%;
         }
     }
 }
@@ -681,6 +797,15 @@
             }
         }
 
+        /* Doctor Card */
+        .doctors-container {
+            gap: 30px;
+            padding: 5rem 0;
+        }
+
+        .doc-card {
+            max-width: 90%;
+        }
 
     }
 }
