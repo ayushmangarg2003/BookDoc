@@ -5,14 +5,14 @@ import DoctorCard from '../components/DoctorCard/DoctorCard'
 const Doctors = () => {
   const [search, setSearch] = useState("")
 
-  const loadData = async () => {
+  // const loadData = async () => {
     
-  };
+  // };
 
 
-  useEffect(() => {
-    loadData();
-  }, []);
+  // useEffect(() => {
+  //   loadData();
+  // }, []);
 
   return (
     <div className="doctors-parent">

@@ -16,6 +16,9 @@
     --red: red;
     --green: green;
     --blue: blue;
+    --single-shadow: 5px 5px 10px rgba(0, 0, 0, 0.19);
+    --double-shadow: 5px 5px 10px rgba(0, 0, 0, 0.19), -5px -5px 10px rgba(0, 0, 0, 0.19);
+    --transition-normal: 0.3s ease;
 }
 
 /* Whole App CSS */
@@ -98,7 +101,7 @@
                     color: var(--black);
                     text-decoration: none;
                     font-size: 1.2rem;
-                    transition: 0.3s ease;
+                    transition: var(--transition-normal);
                 }
             }
         }
@@ -125,7 +128,7 @@
                 background-color: var(--black);
                 padding: 8px 12px;
                 border-radius: 2px;
-                transition: 0.3s ease;
+                transition: var(--transition-normal);
                 cursor: pointer;
 
                 .navbar-login-link {
@@ -198,7 +201,7 @@
                     padding: 0.5rem;
                     font-size: 1.75rem;
                     color: var(--black);
-                    transition: 0.3s ease;
+                    transition: var(--transition-normal);
                     border-radius: 40%;
                     overflow: hidden;
 
@@ -224,12 +227,12 @@
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-                transition: 0.3s ease;
+                transition: var(--transition-normal);
 
                 .footer-quicklink {
                     color: var(--black-light);
                     text-decoration: none;
-                    transition: 0.3s ease;
+                    transition: var(--transition-normal);
                 }
 
                 :hover {
@@ -528,7 +531,7 @@
         width: 23%;
         display: flex;
         flex-direction: column;
-        transition: 0.3s ease;
+        transition: var(--transition-normal);
         border-bottom: 0.1px solid var(--black-light);
         gap: 1.25rem;
 
@@ -616,6 +619,64 @@
     .doc-card:hover {
         box-shadow: -5px -10px 10px rgba(0, 0, 0, 0.19);
     }
+
+    /* Service Page */
+    .services-container {
+        padding: 2rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        .service-card-parent {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: var(--single-shadow);
+
+            & h2 {
+                font-family: var(--wide);
+            }
+
+            & p {
+                color: var(--black-light);
+            }
+
+            .icons {
+                display: flex;
+                justify-content: space-between;
+
+                .arrow {
+                    cursor: pointer;
+                    color: var(--black);
+                    font-size: 1.25rem;
+
+                    & i {
+                        transition: var(--transition-normal);
+                        border-radius: 50%;
+                        padding: 0.5rem;
+                    }
+
+                    :hover {
+                        color: var(--white);
+                        background-color: var(--yellow);
+                    }
+                }
+
+                & div {
+                    width: 1rem;
+                    height: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem;
+                }
+            }
+        }
+    }
 }
 
 
@@ -649,8 +710,19 @@
         .doc-card {
             width: 30%;
         }
-        .doctor-search-container{
+
+        .doctor-search-container {
             width: 60%;
+        }
+
+        /* Service Page */
+        .services-container {
+            padding: 2rem 0;
+
+            .service-card-parent {
+                padding: 2rem;
+                width: 45%;
+            }
         }
     }
 }
@@ -671,7 +743,7 @@
                 left: -100%;
                 opacity: 0;
                 height: 90%;
-                transition: 0.3s ease;
+                transition: var(--normal);
                 background-color: var(--white);
             }
 
@@ -782,8 +854,19 @@
         .doc-card {
             width: 45%;
         }
-        .doctor-search-container{
+
+        .doctor-search-container {
             width: 100%;
+        }
+
+        /* Service Page */
+        .services-container {
+            padding: 2rem 0;
+
+            .service-card-parent {
+                padding: 2rem;
+                width: 90%;
+            }
         }
     }
 }
@@ -844,8 +927,15 @@
         .doc-card {
             width: 90%;
         }
+
         .doctor-search-container {
             padding: 3rem 1rem 0rem 1rem;
+        }
+
+        /* Service Page */
+        .services-container {
+            padding: 2rem 0;
+
         }
 
     }
