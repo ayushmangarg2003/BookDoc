@@ -5,15 +5,6 @@ import DoctorCard from '../components/DoctorCard/DoctorCard'
 const Doctors = () => {
   const [search, setSearch] = useState("")
 
-  // const loadData = async () => {
-    
-  // };
-
-
-  // useEffect(() => {
-  //   loadData();
-  // }, []);
-
   return (
     <div className="doctors-parent">
       <div className="section-heading">FIND A DOCTOR</div>
@@ -27,7 +18,7 @@ const Doctors = () => {
             console.log(search);
           }}
         />
-        <i class="fa fa-search" aria-hidden="true"></i>
+        <i className="fa fa-search" aria-hidden="true"></i>
       </div>
       <div className='doctors-container'>
         {
