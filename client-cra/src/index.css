@@ -98,6 +98,7 @@
                 padding: 1rem 0;
                 justify-content: start;
                 gap: 5rem;
+                z-index: 1;
 
                 .stat {
                     display: flex;
@@ -939,6 +940,7 @@
                 opacity: 0;
                 height: 90%;
                 transition: var(--normal);
+                z-index: 100;
                 background-color: var(--white);
             }
 
