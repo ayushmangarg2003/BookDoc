@@ -21,7 +21,7 @@ const Profile = () => {
             setUserData(res.data)
         }
         getData()
-    }, [])
+    }, [user])
 
     const handleLogout = () => {
         logout()
