@@ -4,11 +4,16 @@ import axios from 'axios';
 import { useLogout } from '../hooks/useLogout'
 import profilePic from "../assets/images/user.png"
 
-import { backendLink } from "../main"
+import { backendLink } from "../index"
 const Profile = () => {
     const { user } = useAuthContext()
     const { logout } = useLogout()
-    const [userData, setUserData] = useState({})
+    const [userData, setUserData] = useState({
+        name: "",
+        email: "",
+        role: "",
+        gender: "",
+    })
 
     useEffect(() => {
         const getData = async () => {
@@ -16,7 +21,7 @@ const Profile = () => {
             setUserData(res.data)
         }
         getData()
-    }, [])
+    }, [user])
 
     const handleLogout = () => {
         logout()

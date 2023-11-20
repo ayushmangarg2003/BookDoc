@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useAuthContext } from './useAuthContext'
-import { backendLink } from '../main'
+import { backendLink } from '..'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
