@@ -2,9 +2,9 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className="contact-parent">
+    <div className="contact-container">
       <div className="section-heading">CONTACT</div>
-      <div className='contact-container'>
+      <div className='contact-parent'>
         <div className='contact-form'>
           <div className='form-left'>
             <input className='form-input' placeholder="Your Name" />
