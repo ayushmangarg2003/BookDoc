@@ -23,9 +23,12 @@
 
 /* Whole App CSS */
 .app-parent {
-    max-width: 1300px;
-    margin: auto;
-    font-family: var(--normal);
+    display: flex;
+    justify-content: center;
+    .app{
+        max-width: 1300px;
+        font-family: var(--normal);
+    }
 
     .app-container {
         min-height: 60vh;
@@ -526,13 +529,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
+            gap: 20px;
             .form-left {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                margin-right: 20px;
 
                 & input {
                     width: 300px;
@@ -579,13 +581,12 @@
     }
 
     .doctor-search-container {
-        width: 50%;
+        width: 100%;
         padding: 3rem 2rem 0rem 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        margin: auto;
 
         & i {
             font-size: 1.25rem;
@@ -603,7 +604,7 @@
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.19), -5px -5px 10px rgba(0, 0, 0, 0.19);
             outline: none;
             padding: 8px;
-            width: 100%;
+            width: 50%;
         }
     }
 
@@ -868,7 +869,9 @@
         }
 
         .doctor-search-container {
-            width: 60%;
+            & input{
+                width: 60%;
+            }
         }
 
         /* Service Page */
@@ -915,8 +918,8 @@
             }
 
             .home-right {
-                width: 75%;
-                margin: auto;
+                /* width: 75%; */
+                width: 100%;
             }
 
         }
@@ -1013,12 +1016,12 @@
 
             .contact-form {
                 flex-direction: column;
-                height: 300px;
+                height: 330px;
+                gap: 20px;
 
                 .form-left {
                     height: 50%;
-                    margin-right: 0;
-
+                    gap: 20px;
                     & input {
                         padding: 10px;
                         width: 275px;
@@ -1027,16 +1030,14 @@
 
                 .form-right {
                     height: 50%;
-
+                    gap: 20px;
                     & textarea {
-                        margin-top: 20px;
                         padding: 10px;
                         width: 275px
                     }
 
                     .form-btn {
                         font-size: 16px;
-                        margin-top: 20px;
                     }
                 }
             }
@@ -1048,7 +1049,9 @@
         }
 
         .doctor-search-container {
-            width: 100%;
+            & input{
+                width: 100%;
+            }
         }
 
         /* Service Page */
