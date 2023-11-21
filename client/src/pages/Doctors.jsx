@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { doctors } from '../assets/data/doctors'
 import DoctorCard from '../components/DoctorCard/DoctorCard'
-import {backendLink} from "../index.js"
+import { backendLink } from "../index.js"
 import axios from 'axios';
-
-// const backendLink = "http://localhost:4000"
+import Shimmer from '../components/Shimmer/Shimmer';
 
 const Doctors = () => {
   const [search, setSearch] = useState("")
+  const [loading, setLoading] = useState(true)
+
   const [doc, setDoc] = useState(doctors)
   useEffect(() => {
     try {
       axios.get(`${backendLink}/api/doctor/doctorData`).then((res) => {
         setDoc(res.data)
-        console.log(res.data);
+        setLoading(false)
       })
     } catch (error) {
       console.log(error);
@@ -27,29 +28,35 @@ const Doctors = () => {
     }
   }
 
-  return (
-    <div className="doctors-parent">
-      <div className="section-heading">FIND A DOCTOR</div>
-      <div className="doctor-search-container">
-        <input
-          type="search"
-          placeholder="Search"
-          value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-          }}
-        />
-        <i className="fa fa-search" aria-hidden="true"></i>
-      </div>
-      <div className='doctors-container'>
-        {
-          filtered.map((item) => (
-            <DoctorCard key={item._id} doc={item} search={search} />
-          ))
-        }
-      </div>
-    </div>
-  )
+  return <>
+
+        <div className="doctors-parent">
+          <div className="section-heading">FIND A DOCTOR</div >
+          <div className="doctor-search-container">
+            <input
+              type="search"
+              placeholder="Search"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
+            />
+            <i className="fa fa-search" aria-hidden="true"></i>
+          </div>
+          {
+            loading ? (<Shimmer />) : (
+              <div className='doctors-container'>
+                {
+                  filtered.map((item) => (
+                    <DoctorCard key={item._id} doc={item} search={search} />
+                  ))
+                }
+              </div>
+            )
+          }
+        </div >
+  </>
+
 }
 
 export default Doctors

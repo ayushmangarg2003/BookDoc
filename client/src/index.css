@@ -30,7 +30,9 @@
 
         width: 100%;
     }
-
+    .shimmer-mobile{
+        display: none;
+    }
     .app-container {
         min-height: 60vh;
         background: url('./assets//images/Blur.png');
@@ -928,6 +930,13 @@
 @media only screen and (max-width:800px) {
     .app-parent {
 
+        /* Shimmer  */
+        .shimmer-mobile{
+            display: block;
+        }
+        .shimmer-laptop{
+            display: none;
+        }
         /* Navbar */
         .navbar-parent {
             padding: 1rem 10px;
