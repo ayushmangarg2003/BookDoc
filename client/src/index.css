@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /* Variables */
 :root {
     --yellow: #FFCD00;
@@ -20,14 +19,16 @@
     --double-shadow: 5px 5px 10px rgba(0, 0, 0, 0.19), -5px -5px 10px rgba(0, 0, 0, 0.19);
     --transition-normal: 0.3s ease;
 }
-
 /* Whole App CSS */
 .app-parent {
+    max-width: 1300px;
     display: flex;
+    margin: auto;
     justify-content: center;
+    font-family: var(--normal);   
     .app{
-        max-width: 1300px;
-        font-family: var(--normal);
+
+        width: 100%;
     }
 
     .app-container {
@@ -834,9 +835,7 @@
         }
     }
 }
-
 /* Media Query 1000px */
-
 @media only screen and (max-width:1000px) {
 
     /* Register Page */
@@ -925,7 +924,6 @@
         }
     }
 }
-
 /* Media Query 800px */
 @media only screen and (max-width:800px) {
     .app-parent {
@@ -1093,7 +1091,6 @@
 
     }
 }
-
 /* Media Query 520px */
 @media only screen and (max-width:520px) {
     .app-parent {

@@ -9,10 +9,12 @@ const app = express()
 const cors = require("cors");
 const { default: mongoose, mongo } = require('mongoose')
 const userRoutes = require('./Routes/UserRoute')
+const doctorRoutes = require('./Routes/DoctorRoute')
 //Middlewares
 app.use(cors())
 app.use(express.json())
 app.use('/api/auth', userRoutes)
+app.use('/api/doctor', doctorRoutes )
 //Routes
 
 

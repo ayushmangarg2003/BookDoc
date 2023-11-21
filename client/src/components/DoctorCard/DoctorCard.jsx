@@ -6,7 +6,7 @@ const DoctorCard = (props) => {
             <img src={props.doc.img} alt={props.doc.name} />
             <div className="name-title">
                 <h1>{props.doc.name}</h1>
-                <p>{props.doc.specialty}</p>
+                <p>{props.doc.speciality}</p>
             </div>
             <div className="stats">
                 <div className="patients">
