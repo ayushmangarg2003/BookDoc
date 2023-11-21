@@ -5,6 +5,13 @@ import DoctorCard from '../components/DoctorCard/DoctorCard'
 const Doctors = () => {
   const [search, setSearch] = useState("")
 
+  let filtered = [];
+  for (let i = 0; i < doctors.length; i++) {
+    if (doctors[i].name.toLowerCase().includes(search.toLowerCase()) || doctors[i].specialty.toLowerCase().includes(search.toLowerCase()) || doctors[i].hospital.toLowerCase().includes(search.toLowerCase()) || doctors[i].city.toLowerCase().includes(search.toLowerCase())) {
+      filtered = [...filtered, doctors[i]];
+    }
+  }
+
   return (
     <div className="doctors-parent">
       <div className="section-heading">FIND A DOCTOR</div>
@@ -22,8 +29,8 @@ const Doctors = () => {
       </div>
       <div className='doctors-container'>
         {
-          doctors.map((doc) => (
-            <DoctorCard key={doc.id} doc={doc} />
+          filtered.map((doc) => (
+            <DoctorCard key={doc.id} doc={doc} search={search} />
           ))
         }
       </div>
