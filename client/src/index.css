@@ -102,7 +102,7 @@
             .stats {
                 display: flex;
                 padding: 1rem 0;
-                justify-content: start;
+                justify-content: flex-start;
                 gap: 5rem;
                 z-index: 1;
 
@@ -299,7 +299,7 @@
         .footer-right {
             width: 50%;
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
             gap: 5rem;
 
             & h1 {
