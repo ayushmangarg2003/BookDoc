@@ -20,9 +20,9 @@ const Home = () => {
             <h2>{DOCTORS}</h2>
             <p>Doctors</p>
           </div>
-          <div className="">
+          <div className="stat">
             <h2>{SATISFACTION}</h2>
-            <p>Stisfaction</p>
+            <p>Satisfaction</p>
           </div>
         </div>
       </div>

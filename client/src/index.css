@@ -198,7 +198,7 @@
 
             .user-icon {
                 & i {
-                    background-color: var(--black-light);
+                    background-color: var(--black);
                     color: var(--white);
                     width: 100%;
                     font-size: 1.5rem;

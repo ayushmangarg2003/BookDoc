@@ -17,7 +17,7 @@ const Navbar = () => {
             <div className="nav-left">
                 <Link to={'/'} className='logo-link'>
                     {/* Logo */}
-                    <div className="logo-img"><i className="fa-solid fa-user-doctor" /></div>
+                    <div className="logo-img"><i className="fa-solid fa-star-of-life"></i></div>
                     <div className="logo-name">{COMPANY_NAME_1}<p>{COMPANY_NAME_2}</p></div>
                 </Link>
             </div>
