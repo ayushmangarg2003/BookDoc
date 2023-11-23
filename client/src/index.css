@@ -354,7 +354,7 @@
 
             & input {
                 border-radius: 4px;
-                outline: invert;
+                outline: none;
                 padding: 8px 12px;
                 font-size: 1rem;
                 font-weight: 500;
