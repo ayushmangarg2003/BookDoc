@@ -2,7 +2,7 @@ import React from 'react'
 
 import {Link} from "react-router-dom"
 import { DOCTORS, HOME_DESC, HOME_HEAD, SATISFACTION, YEARS } from '../assets/utils'
-import homeIMG from "../assets/images/about.png"
+import homeIMG from "../assets/images/about.webp"
 
 const Home = () => {
   return (

@@ -4,38 +4,43 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Variables */
 :root {
-    --yellow: #FFCD00;
+    --yellow: rgb(255, 228, 75);
     --wide: 'Montserrat', sans-serif;
     --normal: 'Roboto', sans-serif;
     --black: #151515;
-    --black-light: #555555;
+    --black-light: #454545;
     --white: #fff;
     --red: red;
-    --green: green;
-    --blue: blue;
+    --green: rgb(78, 134, 77);
+    --blue: rgb(0, 60, 255);
     --single-shadow: 5px 5px 10px rgba(0, 0, 0, 0.19);
     --double-shadow: 5px 5px 10px rgba(0, 0, 0, 0.19), -5px -5px 10px rgba(0, 0, 0, 0.19);
     --transition-normal: 0.3s ease;
 }
+
 /* Whole App CSS */
 .app-parent {
     max-width: 1300px;
     display: flex;
     margin: auto;
     justify-content: center;
-    font-family: var(--normal);   
-    .app{
+    font-family: var(--normal);
+
+    .app {
 
         width: 100%;
     }
-    .shimmer-mobile{
+
+    .shimmer-mobile {
         display: none;
     }
+
     .app-container {
         min-height: 60vh;
-        background: url('./assets//images/Blur.png');
+        background: url('./assets//images/Blur.webp');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -534,6 +539,7 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
+
             .form-left {
                 height: 100%;
                 display: flex;
@@ -605,8 +611,7 @@
             font-size: 1.15rem;
             border-radius: 4px;
             border: none;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.19), -5px -5px 10px rgba(0, 0, 0, 0.19);
-            outline: none;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;            outline: none;
             padding: 8px;
             width: 50%;
         }
@@ -615,7 +620,7 @@
     .doc-card {
         padding: 10px 10px 20px 10px;
         border-radius: 4px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.19), -2px -2px 5px rgba(0, 0, 0, 0.19);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         width: 23%;
         display: flex;
         flex-direction: column;
@@ -705,7 +710,7 @@
     }
 
     .doc-card:hover {
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.19);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     }
 
     /* Service Page */
@@ -838,6 +843,7 @@
         }
     }
 }
+
 /* Media Query 1000px */
 @media only screen and (max-width:1000px) {
 
@@ -871,7 +877,7 @@
         }
 
         .doctor-search-container {
-            & input{
+            & input {
                 width: 60%;
             }
         }
@@ -927,17 +933,20 @@
         }
     }
 }
+
 /* Media Query 800px */
 @media only screen and (max-width:800px) {
     .app-parent {
 
         /* Shimmer  */
-        .shimmer-mobile{
+        .shimmer-mobile {
             display: block;
         }
-        .shimmer-laptop{
+
+        .shimmer-laptop {
             display: none;
         }
+
         /* Navbar */
         .navbar-parent {
             padding: 1rem 10px;
@@ -1030,6 +1039,7 @@
                 .form-left {
                     height: 50%;
                     gap: 20px;
+
                     & input {
                         padding: 10px;
                         width: 275px;
@@ -1039,6 +1049,7 @@
                 .form-right {
                     height: 50%;
                     gap: 20px;
+
                     & textarea {
                         padding: 10px;
                         width: 275px
@@ -1057,7 +1068,7 @@
         }
 
         .doctor-search-container {
-            & input{
+            & input {
                 width: 100%;
             }
         }
@@ -1101,6 +1112,7 @@
 
     }
 }
+
 /* Media Query 520px */
 @media only screen and (max-width:520px) {
     .app-parent {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useAuthContext } from '../hooks/useAuthContext'
 import axios from 'axios';
 import { useLogout } from '../hooks/useLogout'
-import profilePic from "../assets/images/user.png"
+import profilePic from "../assets/images/user.webp"
 
 import { backendLink } from "../index"
 const Profile = () => {

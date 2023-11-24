@@ -1,14 +1,14 @@
 export const doctors = [
   // {
-  //   name: "Dr. Ayushman",
-  //   email:"ayushman",
-  //   password:"",
-  //   specialty: "Surgeon",
-  //   rating: 4.8,
-  //   img: "",
-  //   patients: 1500,
-  //   hospital: "Apollo",
-  //   city: "Delhi",
+  //   name:,
+  //   email,
+  //   password,
+  //   specialty: ,
+  //   rating: ,
+  //   img: ,
+  //   patients:,
+  //   hospital: ,
+  //   city:,
   // },
 ];
 
@@ -17,14 +17,14 @@ export const doctors = [
 
 //  SAMPLE BODY 
 // {
-//   "name": "Dr. Pranav",
-//   "email":"pranav1@gmail.com",
-//   "password":"12345678",
+//   "name": "Dr. Ayushman",
+//   "email":"ayush@gmail.com",
+//   "password":"random123",
 //   "speciality": "Surgeon",
-//   "rating": "4.8",
-//   "img": "https://source.unsplash.com/featured/900x900/?doctor",
-//   "patients": "1500",
-//   "hospital": "Apollo",
+//   "rating": "5",
+//   "img": "https://source.unsplash.com/featured/300x300/?doctor",
+//   "patients": "5000",
+//   "hospital": "medanta",
 //   "city": "Delhi"
 // }
 
